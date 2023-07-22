@@ -31,8 +31,8 @@ fun HomeScreen(
                 .clickable {
                 navController.navigate(
                     route = Screen.Detail.passNameAndId(
-                        id = 11,
-                        name = "John"
+                        id = null,
+                        name = "Test"
                     )
                 )
             },

@@ -1,5 +1,6 @@
 package com.example.nestednavigationdemo.navigation.nav_graph
 
+import android.util.Log
 import androidx.navigation.*
 import androidx.navigation.compose.composable
 import com.example.nestednavigationdemo.navigation.DETAIL_ARGUMENT_KEY
@@ -33,8 +34,11 @@ fun NavGraphBuilder.homeNavGraph(
                     defaultValue = "Stevdza-San"
                 }
             )
-        ) {
-            DetailScreen(navController = navController)
+        ) {backStack ->
+            val key = backStack.arguments?.getInt(DETAIL_ARGUMENT_KEY)
+            val key2 = backStack.arguments?.getString(DETAIL_ARGUMENT_KEY2)
+            Log.d("WHAT", "Data passed to Detail: $key and $key2")
+            DetailScreen(navController = navController, data = "$key, $key2")
         }
     }
 }

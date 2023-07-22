@@ -9,10 +9,10 @@ const val HOME_GRAPH_ROUTE = "home"
 
 sealed class Screen(val route: String) {
     object Home : Screen(route = "home_screen")
-    object Detail : Screen(route = "detail_screen?id={id}&name={name}") {
+    object Detail : Screen(route = "detail_screen?$DETAIL_ARGUMENT_KEY={id}&$DETAIL_ARGUMENT_KEY2={name}") {
         fun passNameAndId(
-            id: Int = 0,
-            name: String = "Stevdza-San"
+            id: Int? = null,
+            name: String = "String"
         ): String {
             return "detail_screen?id=$id&name=$name"
         }

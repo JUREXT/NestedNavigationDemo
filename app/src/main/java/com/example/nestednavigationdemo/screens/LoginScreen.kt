@@ -38,7 +38,7 @@ fun LoginScreen(
                 .padding(top = 150.dp)
                 .clickable {
                     navController.popBackStack()
-                    navController.navigate(Screen.Detail.passNameAndId())
+                    navController.navigate(Screen.Detail.passNameAndId(id = 500, name = "Test"))
                 },
             text = "Open Detail Screen",
             fontSize = MaterialTheme.typography.h6.fontSize,

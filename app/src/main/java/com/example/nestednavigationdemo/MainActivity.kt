@@ -8,6 +8,8 @@ import androidx.navigation.compose.rememberNavController
 import com.example.nestednavigationdemo.navigation.nav_graph.SetupNavGraph
 import com.example.nestednavigationdemo.ui.theme.NestedNavigationDemoTheme
 
+
+// TODO: derivedStateOf https://www.youtube.com/watch?v=yJheLbxYd10
 class MainActivity : ComponentActivity() {
 
     private lateinit var navController: NavHostController

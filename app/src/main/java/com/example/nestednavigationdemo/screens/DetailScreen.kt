@@ -17,7 +17,8 @@ import com.example.nestednavigationdemo.navigation.Screen
 
 @Composable
 fun DetailScreen(
-    navController: NavController
+    navController: NavController,
+    data: String,
 ) {
     Box(
         modifier = Modifier.fillMaxSize(),
@@ -31,7 +32,7 @@ fun DetailScreen(
                     }
                 }
             },
-            text = "Detail",
+            text = "Detail $data",
             color = Color.Red,
             fontSize = MaterialTheme.typography.h3.fontSize,
             fontWeight = FontWeight.Bold
@@ -43,6 +44,7 @@ fun DetailScreen(
 @Preview(showBackground = true)
 fun DetailScreenPreview() {
     DetailScreen(
-        navController = rememberNavController()
+        navController = rememberNavController(),
+        data = "Test"
     )
 }
