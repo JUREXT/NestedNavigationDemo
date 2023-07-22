@@ -12,6 +12,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
+import com.example.nestednavigationdemo.extension.blackBorder
 import com.example.nestednavigationdemo.navigation.AUTH_GRAPH_ROUTE
 import com.example.nestednavigationdemo.navigation.Screen
 
@@ -25,7 +26,9 @@ fun HomeScreen(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            modifier = Modifier.clickable {
+            modifier = Modifier
+                .blackBorder()
+                .clickable {
                 navController.navigate(
                     route = Screen.Detail.passNameAndId(
                         id = 11,
@@ -40,6 +43,7 @@ fun HomeScreen(
         )
         Text(
             modifier = Modifier
+                .blackBorder()
                 .padding(top = 150.dp)
                 .clickable {
                     navController.navigate(AUTH_GRAPH_ROUTE)
